@@ -12,6 +12,10 @@ public class Main {
         for(int i=0;i<avatars.size();i++){
             System.out.println(avatars.get(i).moveCharacter());
             System.out.println(avatars.get(i).attack());
+            avatars.get(i).firstSkill();
+            avatars.get(i).secondSkill();
+            avatars.get(i).ultimateSkill();
+            System.out.println();
         }
     }
 }

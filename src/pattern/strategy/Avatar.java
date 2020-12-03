@@ -1,6 +1,6 @@
 package pattern.strategy;
 
-public class Avatar {
+public abstract class Avatar {
     private final String name;
     private double movementSpeed;
     private IMovementBehaviour movementBehaviour;
@@ -20,4 +20,8 @@ public class Avatar {
     public String attack(){
         return this.name + " is " + this.elementBehaviour.attack();
     }
+
+    protected abstract void firstSkill();
+    protected abstract void secondSkill();
+    protected abstract void ultimateSkill();
 }
