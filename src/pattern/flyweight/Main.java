@@ -8,16 +8,13 @@ public class Main {
     static List<Bullet> bullets = new ArrayList<>();
 
     public static void main(String[] args) {
-        BulletType bulletType1 = BulletTypeFactory.getBulletType("Metallic", "smooth");
-        BulletType bulletType2 = BulletTypeFactory.getBulletType("Metallic", "rugged");
-
         Random r = new Random();
 
         for(int i=0;i<10000;i++){
             addBullets(
                     r.nextDouble(),
                     r.nextDouble(),
-                    (i%2==0)?bulletType1:bulletType2
+                    (i%2==0)?BulletTypeFactory.getBulletType("Metallic", "smooth"):BulletTypeFactory.getBulletType("Metallic", "rugged")
             );
         }
 
