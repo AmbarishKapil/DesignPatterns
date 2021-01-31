@@ -1,15 +1,17 @@
 package pattern.adapter;
 
-//This is the adapter, currently we are using LSTM model for nlp but in the future we can switch to the GPT model
 public class SmartBehaviourAdapter implements PlayerAI{
-    LSTMLibrary LSTMLibrary;
+    LSTMLibrary lstmLibrary;
+    GPTLibrary gptLibrary;
 
     public SmartBehaviourAdapter(){
-        LSTMLibrary = new LSTMLibrary();
+        lstmLibrary = new LSTMLibrary();
+        gptLibrary = new GPTLibrary();
     }
 
     @Override
     public String smartResponse(String input) {
-        return LSTMLibrary.smartChat(input);
+        //return lstmLibrary.smartChat(input);
+        return gptLibrary.gptResponse(input);
     }
 }
