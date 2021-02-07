@@ -1,6 +1,6 @@
 package pattern.bridge;
 
-public class HaltedView implements VehiclePreview{
+public class HaltedView implements VehiclePreview {
     RacingVehicle vehicle;
 
     public HaltedView(RacingVehicle vehicle) {
