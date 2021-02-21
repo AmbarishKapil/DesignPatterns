@@ -1,10 +1,10 @@
 package pattern.composite;
 
-public class SubMissions implements IMission{
+public class Task implements IMission{
     private String missionStatement;
     private boolean missionStatus;
 
-    public SubMissions(String missionStatement) {
+    public Task(String missionStatement) {
         this.missionStatement = missionStatement;
         this.missionStatus = false;
     }
@@ -15,7 +15,7 @@ public class SubMissions implements IMission{
 
     @Override
     public String missionObjective() {
-        return null;
+        return this.missionStatement;
     }
 
     @Override
