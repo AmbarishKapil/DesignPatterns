@@ -14,6 +14,6 @@ public class HpRestore extends HealthItemDecorator {
 
     @Override
     public double getHealthStats() {
-        return iHealth.getHealthStats()*2;
+        return iHealth.getHealthStats() + 100d;
     }
 }

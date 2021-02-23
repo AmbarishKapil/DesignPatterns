@@ -14,6 +14,6 @@ public class Immortality extends HealthItemDecorator{
 
     @Override
     public double getHealthStats() {
-        return (iHealth.getHealthStats() + 100d);
+        return iHealth.getHealthStats()*2;
     }
 }
