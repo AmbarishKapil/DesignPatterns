@@ -2,7 +2,7 @@ package pattern.iterator;
 
 import java.util.ArrayList;
 
-public class WeaponInventory implements AbstractInventory{
+public class WeaponInventory implements AbstractInventory<Weapon>{
     private ArrayList<Weapon> weapons;
 
     public WeaponInventory() {

@@ -4,6 +4,15 @@ import pattern.abstractfactory.Sword;
 
 import java.util.Scanner;
 
+/**
+ * This is an implementation of the observer pattern
+ *
+ * Here we are coding a weapon choosing interface for an Assassins Creed game. We have designed
+ * two interfaces AbstractInventory and AbstractIterator and have implemented them in classes
+ * WeaponInventory and WeaponIterator. We also have a Weapons class to store weapon related info.
+ * The implementation is like a circular list where the player can move forward, move back or
+ * lock on the current weapon.
+ */
 public class Main {
     public static void main(String[] args) {
         AbstractInventory weaponInventory = new WeaponInventory();

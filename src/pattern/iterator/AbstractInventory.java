@@ -1,6 +1,6 @@
 package pattern.iterator;
 
-public interface AbstractInventory {
+public interface AbstractInventory<T> {
     AbstractIterator createIterator();
-    void addItemToInventory(Weapon weapon);
+    void addItemToInventory(T t);
 }
