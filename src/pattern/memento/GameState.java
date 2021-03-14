@@ -5,11 +5,12 @@ public class GameState {
     private double characterLocX, characterLocY;
     private String characterProgress; //This should have been a BLOB object, but let's just go with string for simplicity
 
+    // These will be called via user input, i.e. when user moves forward or has a significant upgrade
+    // These will also be called when reloading a memento
     public void setCharacterLoc(double x, double y){
         this.characterLocX = x;
         this.characterLocY = y;
     }
-
     public void setCharacterProgress(String characterProgress){
         this.characterProgress = characterProgress;
     }
