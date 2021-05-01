@@ -1,5 +1,16 @@
 package pattern.observer;
 
+import java.util.EnumSet;
+
+/**
+ * This is an implementation of the observer design pattern.
+ *
+ * Here we are designing a Counter Strike type game where there are two teams police and
+ * terrorist. Both the teams play on a common map and both teams gets notified every time
+ * there is an event on the map. Now if the team members had to poll for the event, it
+ * would be inefficient, thus we have written the observer pattern such that anytime something
+ * notify worthy happens the teams gets notified and can act accordingly
+ */
 public class Main {
     public static void main(String[] args) {
         SubjectMap map = new SubjectMap();

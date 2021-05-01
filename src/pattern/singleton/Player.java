@@ -3,12 +3,12 @@ package pattern.singleton;
 public class Player {
     private String playerName;
     private final String playerEmail;
-    private double playerPoints;
+    private int playerPoints;
 
     public Player(String playerName, String playerEmail) {
         this.playerName = playerName;
         this.playerEmail = playerEmail;
-        this.playerPoints = 0.0d;
+        this.playerPoints = 0;
     }
 
     public String getPlayerName() {
@@ -23,11 +23,11 @@ public class Player {
         return playerEmail;
     }
 
-    public double getPlayerPoints() {
+    public int getPlayerPoints() {
         return playerPoints;
     }
 
-    public void setPlayerPoints(double playerPoints) {
+    public void setPlayerPoints(int playerPoints) {
         this.playerPoints = playerPoints;
     }
 }

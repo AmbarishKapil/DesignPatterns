@@ -1,9 +1,9 @@
 package pattern.state;
 
-public class NPCBehaviour {
+public class NPCContext {
     private NPCState state;
 
-    public NPCBehaviour() {
+    public NPCContext() {
         this.state = new Wandering();
     }
 

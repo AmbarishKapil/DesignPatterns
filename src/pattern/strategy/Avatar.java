@@ -18,6 +18,6 @@ public class Avatar {
     }
 
     public String attack(){
-        return this.name + " is " + this.elementBehaviour.attack();
+        return this.name + " uses " + this.elementBehaviour.attack();
     }
 }

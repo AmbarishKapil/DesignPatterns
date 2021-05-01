@@ -10,7 +10,6 @@ public class BulletTypeFactory {
          if(bulletTypes.get(color+texture) != null){
              return bulletTypes.get(color+texture);
          }else{
-             System.out.println("is here");
              BulletType b = new BulletType(color, texture);
              bulletTypes.put(color+texture, b);
              return b;
