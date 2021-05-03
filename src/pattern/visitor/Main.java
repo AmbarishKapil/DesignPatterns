@@ -1,22 +1,27 @@
 package pattern.visitor;
 
+/**
+ * This is an implementation of the visitor design pattern
+ *
+ * Here we are programming the branched evolution for a pokemon game. We have a fixed
+ * number of stones and they act differently when applied to different pokemon. Here we
+ * have kept pokemon as Visitor since there are so many pokemon getting added and they
+ * each have a evolution when interacted with a particular stone. Thus with addition of
+ * new pokemon, we do not have to modify the, already working, stone classes and risk
+ * breaking anything. We can just simply make the pokemon implement Visitor and override
+ * visit for each of the stones to handle the evolution logic.
+ */
 public class Main {
     public static void main(String[] args) {
-        IPokemon pokemon = new Pokemon();
-        System.out.println(pokemon);
+        Visitor poliwhirl = new Poliwhirl();
+        Visitor eevee = new Eevee();
 
-        IPokemon pokemon1 = new Pokemon();
-        pokemon1.accept(new FireStoneVisitor());
-        System.out.println(pokemon1);
+        Stone fireStone = new FireStone();
+        fireStone.accept(eevee);
+        fireStone.accept(poliwhirl);
 
-        IPokemon pokemon2 = new Pokemon();
-        pokemon2.accept(new WaterStoneVisitor());
-        System.out.println(pokemon2);
-
-        IPokemon pokemon3 = new Pokemon();
-        pokemon3.accept(new ThunderStoneVisitor());
-        System.out.println(pokemon3);
+        Stone waterStone = new WaterStone();
+        waterStone.accept(eevee);
+        waterStone.accept(poliwhirl);
     }
-
-
 }
